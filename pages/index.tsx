@@ -186,6 +186,7 @@ const Home: NextPage = () => {
           ) : null}
           {!loading && !gameOver && (
             <QuestionCard
+              key={number + 1}
               quesntionNo={number + 1}
               totalQuestions={totalQuestions}
               question={questions[number].question}

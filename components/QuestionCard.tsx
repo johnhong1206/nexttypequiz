@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { AnswerObject } from "../pages";
 type Props = {
+  key: string;
   question: string;
   answer: string[];
   callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
@@ -10,6 +11,7 @@ type Props = {
 };
 
 const QuestionCard: React.FC<Props> = ({
+  key,
   question,
   answer,
   callback,
@@ -18,7 +20,10 @@ const QuestionCard: React.FC<Props> = ({
   totalQuestions,
 }) => {
   return (
-    <div className="relative flex flex-col m-5 bg-black bg-opacity-50 z-30 p-10 shadow-lg">
+    <div
+      key={key}
+      className="relative flex flex-col m-5 bg-black bg-opacity-50 z-30 p-10 shadow-lg"
+    >
       <p className="mb-1 tracking-widest">
         Question {quesntionNo}/{totalQuestions}
       </p>
