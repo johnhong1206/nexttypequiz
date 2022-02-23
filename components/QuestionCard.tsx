@@ -32,8 +32,11 @@ const QuestionCard: React.FC<Props> = ({
         dangerouslySetInnerHTML={{ __html: question }}
       />
       <div className="mt-4 grid grid-flow-row-dense md:grid-cols-2 gap-4">
-        {answer.map((answer) => (
-          <div className="hover:bg-white hover:bg-opacity-50 text-base  rounded-lg px-2 cursor-pointer hover:font-bold">
+        {answer.map((answer, index) => (
+          <div
+            key={index}
+            className="hover:bg-white hover:bg-opacity-50 text-base  rounded-lg px-2 cursor-pointer hover:font-bold"
+          >
             <button
               disabled={userAnswer ? true : false}
               value={answer}
