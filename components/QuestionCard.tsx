@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { AnswerObject } from "../pages";
 type Props = {
-  key: string;
+  key: any;
   question: string;
   answer: string[];
   callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
